@@ -57,7 +57,7 @@ var app = express();
 var Agenda = require('agenda');
 var Agendash = require('agendash');
 
-var agenda = new Agenda({mongo: 'mongodb://127.0.0.1/agendaDb'});
+var agenda = new Agenda({db: {address: 'mongodb://127.0.0.1/agendaDb'}});
 app.use('/agendash', Agendash(agenda));
 
 // ... your other routes
